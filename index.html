@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+    <title>Estamos en eso</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Formulario de relevamiento de datos</h1>
+            <h4>Por favor ingrese los datos requeridos</h4>
+
+        <div class="form-card">
+            <form id="form_p" class="form_p" action="index.php" enctype="multipart/form-data">
+                <label for="nombre" class="label_p">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" autocomplete="off" required  placeholder="Nombre">
+        
+                <label for="apellido" class="label_p">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" autocomplete="off" required placeholder="Apellido">
+                
+                <label for="dni" class="label_p">DNI</label>
+                    <input type="tel" name="dni" id="dni" autocomplete="off" required placeholder="DNI">
+                
+                <label for="edad" class="label_p">Edad</label>
+                    <input type="tel" name="edad" id="edad" autocomplete="off" required placeholder="EDAD">
+                
+                <label for="reclamo" class="label_p">Tipo de queja/reclamo</label>
+                    <select name="reclamo" id="reclamo" autocomplete="off">
+                        <option disabled selected required="true">Queja Generica</option>
+                    </select>
+        
+                <label for="textoad" class="label_p">Reclamos adicionales</label>
+                    <textarea 
+                    name="textoad" 
+                    id="textoad" 
+                    autocomplete="off" 
+                    placeholder="Texto Mamalon"
+                    rows="15"
+                    maxlength="500"
+                    ></textarea>
+                    <input type="submit" name="envio-p" id="envio-p">
+        
+            </form>
+        </div>
+        
+
+        <div class="toast active">
+            <div class="toast-content">
+            <img src="./assets/kanata-desu.png" alt="foto mamalona" class="img-content">
+              <!-- <i class="fas fa-solid fa-check check"></i> -->
+          
+              <div class="message">
+                <span class="text text-1">Que onda pibe toma tu notificación</span>
+                <span class="text text-2">Ahora succioname el miembro</span>
+              </div>
+            </div>
+            
+            <i class="fa-solid fa-xmark close"></i>
+          
+            <div class="progress active"></div>
+          </div>
+        
+
+    </div>
+    <!-- <button>Mostrar Alerta</button> -->
+
+    
+
+    <script src="./main.js"></script>
+</body>
+</html>
+
