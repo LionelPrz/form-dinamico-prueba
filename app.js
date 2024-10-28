@@ -1,4 +1,4 @@
-const shisho = document.querySelector("input");
+const shisho = document.querySelector("form input[id]");
 const toast  = document.querySelector(".toast");
 const closeIcon = document.querySelector(".close");
 const progress = document.querySelector(".progress");
@@ -7,4 +7,6 @@ let timer1, timer2;
 
 console.log(shisho);
 
-alert(shisho);
+function mostrarTarjeta(){
+    
+}
