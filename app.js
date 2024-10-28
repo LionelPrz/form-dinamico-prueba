@@ -7,6 +7,6 @@ let timer1, timer2;
 
 console.log(shisho);
 
-shisho.addEventListener("onfocus",(e)=>{
+shisho.addEventListener('focus',()=>{
     console.log(e.value);
 })
