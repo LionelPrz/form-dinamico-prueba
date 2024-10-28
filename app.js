@@ -7,6 +7,6 @@ let timer1, timer2;
 
 console.log(shisho);
 
-function mostrarTarjeta(){
-    
-}
+shisho.addEventListener("onfocus",(e)=>{
+    console.log(e.value);
+})
