@@ -8,6 +8,8 @@ let timer1, timer2;
 
 console.log(shisho);
 
+alert(shisho);
+
 // button.addEventListener("click", () => {
 //     console.log('click 1')
 //   toast.classList.add("active");
