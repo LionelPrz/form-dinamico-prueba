@@ -1,4 +1,4 @@
-const shisho = document.querySelector(".form-p > input");
+const shisho = document.querySelector(".form-p");
 const toast  = document.querySelector(".toast");
 const closeIcon = document.querySelector(".close");
 const progress = document.querySelector(".progress");
