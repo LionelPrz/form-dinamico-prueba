@@ -3,70 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
+    <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
     <title>Estamos en eso</title>
 </head>
-<body>
-    <div class="container">
+</body>
+    <div class="master-container">
+        <header>
 
-        <h1>Formulario de relevamiento de datos</h1>
-            <h4>Por favor ingrese los datos requeridos</h4>
-
-        <div class="form-card">
-            <form id="form_p" class="form_p" action="index.php" enctype="multipart/form-data">
-                <label for="nombre" class="label_p">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" autocomplete="off" required  placeholder="Nombre">
-        
-                <label for="apellido" class="label_p">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" autocomplete="off" required placeholder="Apellido">
-                
-                <label for="dni" class="label_p">DNI</label>
-                    <input type="tel" name="dni" id="dni" autocomplete="off" required placeholder="DNI">
-                
-                <label for="edad" class="label_p">Edad</label>
-                    <input type="tel" name="edad" id="edad" autocomplete="off" required placeholder="EDAD">
-                
-                <label for="reclamo" class="label_p">Tipo de queja/reclamo</label>
-                    <select name="reclamo" id="reclamo" autocomplete="off">
-                        <option disabled selected required="true">Queja Generica</option>
-                    </select>
-        
-                <label for="textoad" class="label_p">Reclamos adicionales</label>
-                    <textarea 
-                    name="textoad" 
-                    id="textoad" 
-                    autocomplete="off" 
-                    placeholder="Texto Mamalon"
-                    rows="15"
-                    maxlength="500"
-                    ></textarea>
-                    <input type="submit" name="envio-p" id="envio-p">
-        
-            </form>
-        </div>
-        
-
-        <!-- <div class="toast active">
-            <div class="toast-content">
-            <img src="./assets/kanata-desu.png" alt="foto mamalona" class="img-content">
-              <i class="fas fa-solid fa-check check"></i>
-          
-              <div class="message">
-                <span class="text text-1">Que onda pibe toma tu notificación</span>
-                <span class="text text-2">Ahora succioname el miembro</span>
+        </header>
+            <main class="card__content">
+                <!-- Nuevo container -->
+        <div class="card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
               </div>
             </div>
-            
-            <i class="fa-solid fa-xmark close"></i>
-          
-            <div class="progress active"></div>
-          </div> -->
+            <div class="card__content">
+              <!-- nuevo Form -->
+              <form class="form">
+                  <h1>Formulario para relevamiento de datos</h1>
+                  <div class="brutalist-container">
+                      <input
+                      placeholder="Ingrese Nombre"
+                      class="brutalist-input smooth-type"
+                      type="text"
+                      name="nombre"
+                      />
+                      <label for="nombre" class="brutalist-label">Nombre</label>
+                  </div>
+                  <div class="brutalist-container">
+                      <input
+                      placeholder="Ingrese Apellido"
+                      class="brutalist-input smooth-type"
+                      type="text"
+                      name="apellido"
+                      />
+                      <label for="apellido" class="brutalist-label">Apellido</label>
+                  </div>
+                      <div class="brutalist-container">
+                          <input
+                          placeholder="Ingrese DNI"
+                          class="brutalist-input smooth-type"
+                          type="number"
+                          name="dni"
+                          />
+                          <label class="brutalist-label">DNI</label>
+                      </div>
+                     <div class="brutalist-container">
+                          <input
+                          placeholder="Ingrese Telefono"
+                          class="brutalist-input smooth-type"
+                          type="tel"
+                          name="telefono"
+                          />
+                          <label class="brutalist-label">Telefono</label>
+                     </div>
+                     <div class="brutalist-container">
+                        <input
+                        placeholder="Ingrese Telefono"
+                        class="brutalist-input smooth-type"
+                        type="tel"
+                        name="telefono"
+                        />
+                        <label class="brutalist-label">Telefono</label>
+                   </div>
+                     
+                  <button class="button-confirm">Enviar Datos</button>
+                </form>
+              </div>
+            </div>
+          </div>
+            </main>
+                <aside class="aside-console">
+                    <div class="card">
+                        <div class="tools">
+                            <div class="circle">
+                            <span class="red box"></span>
+                    </div>
+                        <div class="circle">
+                        <span class="yellow box"></span>
+                    </div>
+                    <div class="circle">
+                        <span class="green box"></span>
+                    </div>
+                    </div>
+                        <div class="aside-content">
+                            <div class="aside-help">
+                            <h3 class="aside-title">Idiota-Kun</h3>
+                            <br>
+                            <strong class="aside-text">Segui las instrucciones</strong>
+                            <br>
+                            <section class="manual">
+                                <img src="./assets/kanata-desu.png" alt="icon">
+                                <p class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dignissimos esse doloribus vero laboriosam adipisci sit omnis harum. Saepe error nesciunt voluptates excepturi at debitis, esse totam praesentium vitae? Exercitationem?
+                                </p>
+      
+                        </section>
+                            <button class="button-next">Siguiente</button>
+                            </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+                    </div>
+                    </div>
+                    </aside>
+        <footer>
+    
+        </footer>
         
-
     </div>
-    <!-- <button>Mostrar Alerta</button> -->
+    
+
+
+            <!-- Nuevo form -->
+                
+                    
+            
+            
+                    <!-- <div class="toast">
+                        <div class="toast-content">
+                        <img src="./assets/kanata-desu.png" alt="foto mamalona" class="img-content">
+                          <i class="fas fa-solid fa-check check"></i>
+                      
+                          <div class="message">
+                            <span class="text text-1">Que onda pibe toma tu notificación</span>
+                            <span class="text text-2">Ahora succioname el miembro</span>
+                          </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-xmark close"></i>
+                      
+                        <div class="progress"></div>
+                      </div> -->
 
     
     <script src="./app.js"></script>
