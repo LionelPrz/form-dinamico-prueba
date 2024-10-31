@@ -1,156 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="./styles.css"> -->
     <link rel="stylesheet" href="./main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
-    <title>Estamos en eso</title>
+    <title>Layout con Grid</title>
 </head>
-</body>
+<body>
     <div class="master-container">
-        <header>
-
+        <header class="header">
+            <h1>Encabezado</h1>
         </header>
-            <main class="card__content">
-                <!-- Nuevo container -->
-        <div class="card">
-            <div class="tools">
-              <div class="circle">
-                <span class="red box"></span>
+        <main class="main">
+            <form class="brutalist-form">
+              <div class="title">Formulario de Quejas</div>
+              
+              <div class="brutalist-container">
+                  <input placeholder="Nombre" class="brutalist-input smooth-type" type="text" />
+                  <label class="brutalist-label">Nombre</label>
               </div>
-              <div class="circle">
-                <span class="yellow box"></span>
+          
+              <div class="brutalist-container">
+                  <input placeholder="Apellido" class="brutalist-input smooth-type" type="text" />
+                  <label class="brutalist-label">Apellido</label>
               </div>
-              <div class="circle">
-                <span class="green box"></span>
+          
+              <div class="brutalist-container">
+                  <input placeholder="DNI" class="brutalist-input smooth-type" type="text" />
+                  <label class="brutalist-label">DNI</label>
               </div>
-            </div>
-            <div class="card__content">
-              <!-- nuevo Form -->
-              <form class="form">
-                  <h1>Formulario para relevamiento de datos</h1>
-                  <div class="brutalist-container">
-                      <input
-                      placeholder="Ingrese Nombre"
-                      class="brutalist-input smooth-type"
-                      type="text"
-                      name="nombre"
-                      />
-                      <label for="nombre" class="brutalist-label">Nombre</label>
+          
+              <div class="brutalist-container">
+                  <input placeholder="Teléfono" class="brutalist-input smooth-type" type="text" />
+                  <label class="brutalist-label">Teléfono</label>
+              </div>
+          
+              <div class="brutalist-container">
+                  <select class="brutalist-input smooth-type">
+                      <option value="" disabled selected>Barrio</option>
+                      <option value="barrio1">Barrio 1</option>
+                      <option value="barrio2">Barrio 2</option>
+                      <option value="barrio3">Barrio 3</option>
+                  </select>
+                  <label class="brutalist-label">Barrio</label>
+              </div>
+          
+              <div class="brutalist-container">
+                  <select class="brutalist-input smooth-type">
+                      <option value="" disabled selected>Tipo de Queja</option>
+                      <option value="queja">Queja</option>
+                      <option value="sugerencia">Sugerencia</option>
+                  </select>
+                  <label class="brutalist-label">Tipo de Queja</label>
+              </div>
+          
+              <div class="brutalist-container">
+                  <textarea placeholder="Detalles de la queja" class="brutalist-input smooth-type" rows="4"></textarea>
+                  <label class="brutalist-label">Ingrese detalles de su queja</label>
+              </div>
+          
+              <button class="button-confirm">Enviar Queja</button>
+          </form>          
+        </main>
+        <aside class="aside">
+            <!-- <div class="card">
+              <div class="tools">
+                  <div class="circle">
+                      <span class="red box"></span>
                   </div>
-                  <div class="brutalist-container">
-                      <input
-                      placeholder="Ingrese Apellido"
-                      class="brutalist-input smooth-type"
-                      type="text"
-                      name="apellido"
-                      />
-                      <label for="apellido" class="brutalist-label">Apellido</label>
+                  <div class="circle">
+                      <span class="yellow box"></span>
                   </div>
-                      <div class="brutalist-container">
-                          <input
-                          placeholder="Ingrese DNI"
-                          class="brutalist-input smooth-type"
-                          type="number"
-                          name="dni"
-                          />
-                          <label class="brutalist-label">DNI</label>
-                      </div>
-                     <div class="brutalist-container">
-                          <input
-                          placeholder="Ingrese Telefono"
-                          class="brutalist-input smooth-type"
-                          type="tel"
-                          name="telefono"
-                          />
-                          <label class="brutalist-label">Telefono</label>
-                     </div>
-                     <div class="brutalist-container">
-                        <input
-                        placeholder="Ingrese Telefono"
-                        class="brutalist-input smooth-type"
-                        type="tel"
-                        name="telefono"
-                        />
-                        <label class="brutalist-label">Telefono</label>
-                   </div>
-                     
-                  <button class="button-confirm">Enviar Datos</button>
-                </form>
+                  <div class="circle">
+                      <span class="green box"></span>
+                  </div>
               </div>
+              <div class="content-header">
+                <p>Aquí van las ayudas para completar el formulario...</p>
             </div>
-          </div>
-            </main>
-                <aside class="aside-console">
-                    <div class="card">
-                        <div class="tools">
-                            <div class="circle">
-                            <span class="red box"></span>
-                    </div>
-                        <div class="circle">
-                        <span class="yellow box"></span>
-                    </div>
-                    <div class="circle">
-                        <span class="green box"></span>
-                    </div>
-                    </div>
-                        <div class="aside-content">
-                            <div class="aside-help">
-                            <h3 class="aside-title">Idiota-Kun</h3>
-                            <br>
-                            <strong class="aside-text">Segui las instrucciones</strong>
-                            <br>
-                            <section class="manual">
-                                <img src="./assets/kanata-desu.png" alt="icon">
-                                <p class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dignissimos esse doloribus vero laboriosam adipisci sit omnis harum. Saepe error nesciunt voluptates excepturi at debitis, esse totam praesentium vitae? Exercitationem?
-                                </p>
-      
-                        </section>
-                            <button class="button-next">Siguiente</button>
-                            </div>
-    
-                    </div>
-                </div>
-    
-            </div>
-                    </div>
-                    </div>
-                    </aside>
-        <footer>
-    
-        </footer>
-        
-    </div>
-    
-
-
-            <!-- Nuevo form -->
+              <div class="card__content">
                 
-                    
-            
-            
-                    <!-- <div class="toast">
-                        <div class="toast-content">
-                        <img src="./assets/kanata-desu.png" alt="foto mamalona" class="img-content">
-                          <i class="fas fa-solid fa-check check"></i>
-                      
-                          <div class="message">
-                            <span class="text text-1">Que onda pibe toma tu notificación</span>
-                            <span class="text text-2">Ahora succioname el miembro</span>
-                          </div>
-                        </div>
-                        
-                        <i class="fa-solid fa-xmark close"></i>
-                      
-                        <div class="progress"></div>
-                      </div> -->
-
-    
-    <script src="./app.js"></script>
-    <!-- <script src="./main.js"></script> -->
+                  <div class="content">
+                    <img src="./assets/kanata-desu.png" alt="terrible">
+                    <p>que onda pibe te ayudo o khe?</p>
+                    <img src="./assets/kanata-desu.png" alt="terrible">
+                    <p>que onda pibe te ayudo o khe?</p>
+                    <img src="./assets/kanata-desu.png" alt="terrible">
+                    <p>que onda pibe te ayudo o khe?</p>
+                    <img src="./assets/kanata-desu.png" alt="terrible">
+                    <p>que onda pibe te ayudo o khe?</p>
+                    <img src="./assets/kanata-desu.png" alt="terrible">
+                    <p>que onda pibe te ayudo o khe?</p>
+                  </div>
+              </div>
+          </div> -->
+        <div class="container">
+                <div class="terminal_toolbar">
+                <div class="butt">
+                <button class="btn btn-color"></button>
+                 <button class="btn"></button>
+                <button class="btn"></button>
+                </div>
+                <p class="user">johndoe@admin: ~</p>
+                <button class="add_tab">+</button>
+            </div>
+            <div class="terminal_body">
+            <div class="terminal_promt">
+            <span class="terminal_user">johndoe@admin:</span>
+        <span class="terminal_location">~</span>
+        <span class="terminal_bling">$</span>
+        <span class="terminal_cursor"></span>
+        </div>
+    </div>
+    </div>
+</aside>
+        <footer class="footer">
+            <p>Pie de página</p>
+        </footer>
+    </div>
 </body>
 </html>
-

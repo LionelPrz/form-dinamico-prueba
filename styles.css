@@ -1,265 +1,198 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-/* 
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f4f7ff;
-    overflow: hidden;
-} */
-/* Estilos para el formulario */
-/* .form-card{
-    margin: auto;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 1.5rem;
-    display: inherit;
-    justify-content: space-around;
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap">
+    <title>Estamos en eso</title>
+</head>
+<body>
+<div class="master-container">
+  <header>
+    <p>header</p>
+  </header>
 
-}
-.form_p{
-    display: flex;
-    flex-direction: column;
-    padding: .5rem;
-    margin: .7rem;
+  <main>
+    <!-- Contenedor principal del formulario -->  
+    <form class="form">
+      <h1>Formulario para relevamiento de datos</h1>
+      <div class="brutalist-container">
+        <input
+          placeholder="Ingrese Nombre"
+          class="brutalist-input smooth-type"
+          type="text"
+          name="nombre"
+        />
+        <label class="brutalist-label">Nombre</label>
+      </div>
+      <div class="brutalist-container">
+        <input
+          placeholder="Ingrese Apellido"
+          class="brutalist-input smooth-type"
+          type="text"
+          name="apellido"
+        />
+        <label class="brutalist-label">Apellido</label>
+      </div>
+      <div class="brutalist-container">
+        <input
+          placeholder="Ingrese DNI"
+          class="brutalist-input smooth-type"
+          type="number"
+          name="dni"
+        />
+        <label class="brutalist-label">DNI</label>
+      </div>
+      <div class="brutalist-container">
+        <input
+          placeholder="Ingrese Teléfono"
+          class="brutalist-input smooth-type"
+          type="tel"
+          name="telefono"
+        />
+        <label class="brutalist-label">Teléfono</label>
+      </div>
+      <button class="button-confirm">Enviar Datos</button>
+    </form>
+  </main>
 
-} */
+  <aside class="aside-console">
+    <div class="aside-help">
+      <h3 class="aside-title">Ayuda</h3>
+      <p class="aside-text">Sigue las instrucciones proporcionadas.</p>
+      <section class="manual">
+        <img src="./assets/kanata-desu.png" alt="icon">
+        <p class="aside-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio dignissimos esse doloribus vero laboriosam adipisci sit omnis harum. Saepe error nesciunt voluptates excepturi at debitis, esse totam praesentium vitae? Exercitationem?</p>
+      </section>
+      <button class="button-next">Siguiente</button>
+    </div>
+  </aside>
 
-/* Estilos de las notificaciones */
-.toast {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    border-radius: 12px;
-    background: #fff;
-    padding: 20px 35px 20px 25px;
-    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transform: translateX(calc(100% + 30px));
-    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+  <footer>
+    <p>© 2023 - Todos los derechos reservados</p>
+  </footer>
+</div>
+</body>
+</html>
 
-    animation: efectoBounce .3s ease alternate;
-}
 
-.toast.active {
-    transform: translateX(0%);
-}
+            <!-- Nuevo form -->
+                
+                    
+            
+            
+                    <!-- <div class="toast">
+                        <div class="toast-content">
+                        <img src="./assets/kanata-desu.png" alt="foto mamalona" class="img-content">
+                          <i class="fas fa-solid fa-check check"></i>
+                      
+                          <div class="message">
+                            <span class="text text-1">Que onda pibe toma tu notificación</span>
+                            <span class="text text-2">Ahora succioname el miembro</span>
+                          </div>
+                        </div>
+                        
+                        <i class="fa-solid fa-xmark close"></i>
+                      
+                        <div class="progress"></div>
+                      </div> -->
 
-.toast .toast-content {
-    display: flex;
-    align-items: center;
-}
-
-.toast-content .check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     
+    <script src="./app.js"></script>
+    <!-- <script src="./main.js"></script> -->
+</body>
+</html>
+
+ */
+
+ /* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.toast-content .img-content{
-    height: 60px;
-    min-width: 55px;
-    background-color: #f4f7ff;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 50%;
+h1{
+  text-align: center;
+  margin-bottom: .7rem;
+  font-size: 2rem;
+  font-family: monospace;
 }
 
-.toast-content .message {
+.master-container{
+display: grid;
+grid-template-rows: auto 1fr auto;
+grid-template-columns: 1fr 300px;
+height: 100vh;
+}
+
+.master-container header{
+background-color: #00ca4e;
+grid-column: 1/-1;
+}
+.master-container main{
+background-color: #323232;
+grid-column: 1/2;
+overflow: auto;
+height: 100%;
+padding: 1rem;
+}
+.master-container footer{
+background-color: #2d8cf0;
+grid-column: 1/-1;
+text-align: center;
+padding: .5rem;
+background-color: #ddd;
+}
+  /* Container Consola */
+
+/*  .card {
+    background-color: #babbbd;
+    border-radius: 8px;
+   }
+   
+   .tools {
     display: flex;
-    flex-direction: column;
-    margin: 0 20px;
-}
-
-.message .text {
-    font-size: 16px;
-    font-weight: 400;
-    color: #666666;
-}
-
-.message .text.text-1 {
-    font-weight: 600;
-    color: #333;
-}
-
-.toast .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    padding: 5px;
-    cursor: pointer;
-    opacity: 0.7;
-}
-
-.toast .close:hover {
-    opacity: 1;
-}
-
-.toast .progress {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 100%;
-
-}
-
-.toast .progress:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #4070f4;
-}
-
-.progress.active:before {
-    animation: progress 5s linear forwards;
-}
-
-@keyframes progress {
-    100% {
-        right: 100%;
-    }
-}
-
-/* button {
-    padding: 12px 20px;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    background-color: #4070f4;
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #0e4bf1;
-} */
-
-.toast.active~button {
-    pointer-events: none;
-}
-
-
-@keyframes efectoBounce{
-    0% {transform: translateY(0px);}
-    100% {transform: translateY(-10px);}
-  }
-
-
-  /* Nuevos estilos form */
-
-/* From Uiverse.io by ayyjayy2 */ 
-.form {
-    --input-focus: #2d8cf0;
-    --font-color: #323232;
-    --font-color-sub: #666;
-    --bg-color: beige;
-    --main-color: black;
-    padding: 20px;
-    background: lightblue;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 20px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    box-shadow: 4px 4px var(--main-color);
-  }
-  
-  .title {
-    color: var(--font-color);
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 25px;
-  }
-  
-  .title span {
-    color: var(--font-color-sub);
-    font-weight: 600;
-    font-size: 17px;
-  }
-  
-  .input {
-    width: 250px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--font-color);
-    padding: 5px 10px;
-    outline: none;
-  }
-  
-  .input::placeholder {
-    color: var(--font-color-sub);
-    opacity: 0.8;
-  }
-  
-  .input:focus {
-    border: 2px solid var(--input-focus);
-  }
-  
-  .login-with {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .button-log {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: 100%;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    color: var(--font-color);
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-  }
+    padding: 9px;
+   }
+   
+   .circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
   
+   .card__content{
+    display: grid;
+    margin: 1rem;
+   }
   
-  .button-log:active, .button-confirm:active {
-    box-shadow: 0px 0px var(--main-color);
-    transform: translate(3px, 3px);
-  }
+    /* Inputs Animados */
   
-  .button-confirm {
-    margin: 50px auto 0 auto;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--font-color);
-    cursor: pointer;
-  }
-
-  
-  /* From Uiverse.io by 0xnihilism */ 
-.brutalist-container {
+  /*.brutalist-container {
     position: relative;
-    width: 250px;
     font-family: monospace;
   }
   
@@ -366,9 +299,9 @@ button:hover {
   }
   
   .brutalist-label {
-    position: absolute;
-    left: -3px;
-    top: -35px;
+    position: relative;
+    left: 1px;
+    top: -90px;
     font-size: 14px;
     font-weight: bold;
     color: #fff;
@@ -439,3 +372,147 @@ button:hover {
     }
   }
   
+  
+  /* form */
+  
+  /*.form {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 25px;
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  
+  }
+  
+  .title {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .title span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .input {
+    width: 90%;
+    max-width: 200px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .input:focus {
+    border: 2px solid var(--input-focus);
+  }
+  
+  .button-confirm {
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--font-color);
+    cursor: pointer;
+  }
+  
+  /* Aside */
+ /* .aside-help {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    padding: 20px;
+    background: lightgrey;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  
+  }
+  .aside-help p{
+    word-wrap: break-word;
+  }
+  
+  .aside-content{
+    margin: 1rem;
+  }
+  
+  .aside-console{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 1rem;
+    background-color: #2d8cf0;
+    
+  }
+  .aside-title {
+    text-align: center;
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  .aside-text{
+    font-size: 0.9rem;
+    font-family: monospace;
+    text-align: center;
+  }
+  
+  .manual{
+    background-color: #fff;
+    box-shadow: 1px 1px 0 4px var(--main-color);
+    border-radius:15px;
+    text-align:center;
+    }
+  .manual img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .button-next{
+    margin: 1rem auto 0;
+    width: 125px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--font-color);
+    cursor: pointer;
+    text-align: center;
+  }
+  /*
