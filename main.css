@@ -152,96 +152,16 @@
 }
 
 /* Card styles */
-/* .card {
-  --main-color: #323232;
-  width: 100%;
-  height: 100%;
-  min-width: 190px;
-  background-color: #F8FBFE;
-  border-radius: 8px;
-  z-index: 1;
-  border: 2px solid var(--main-color);
-  box-shadow: 4px 4px var(--main-color);
-}
-
-.tools {
-  display: flex;
-  align-items: center;
-  padding: 9px;
-  border-radius: 8px;
-}
-
-.circle {
-  padding: 0 4px;
-}
-
-.box {
-  display: inline-block;
-  align-items: center;
-  width: 10px;
-  height: 10px;
-  padding: 1px;
-  border-radius: 50%;
-}
-
-.red {
-  background-color: #ff605c;
-}
-
-.yellow {
-  background-color: #ffbd44;
-}
-
-.green {
-  background-color: #00ca4e;
-}
-
-.card__content {
-  display: flex;
-  align-items: flex-start; /* Cambiar a flex-start para alinear los elementos al inicio */ 
-  /* flex-direction: column;
-  justify-content: flex-start; 
-  margin: 1rem;
-  padding: 15px;
-  font-family: monospace; 
-  color: #272525; 
-  background-color: #e6e9ec;
-  border-radius: 15px;
-  text-align: center;
-}
-
-
-.content-header {
-  margin: 1rem;
-  padding: 15px;
-  background-color: #e6e9ec; /* Opcional: color de fondo para destacar el encabezado */
-  /* border-radius: 10px; /* Redondear esquinas */
-/* } */
-
-/* .content {
-  padding: 0.7rem;
-  background-color: #e6e9ec;
-  border-radius: 15px;
-  flex-grow: 1; /* Permitir que el contenido crezca para llenar el espacio disponible */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; 
-}  */
-
-/* .content img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-}  */
-
 
 /* Terminal Aside */
-.container {
-  width: 300px;
-  height: 300px;
+
+.container{
+  height: 100%;
+  width: 100%;
   background: #1e1e1e;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 4px solid var(--main-color);
+  box-shadow: 5px 6px var(--main-color);
   overflow: hidden;
 }
 
@@ -287,9 +207,9 @@
   border: none;
   color: #ffffff;
   background: #3a3a3a;
-  padding: 5px 10px;
+  padding: 4px 8px;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
   transition: background 0.2s ease;
 }
@@ -350,4 +270,87 @@
   50% {
     opacity: 0;
   }
+} 
+/* Night Mode toggle */
+.nav-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.nav-items a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-decoration-style: none;
+  
+}
+
+/* The switch - the box around the slider */
+#theme-toggle-button {
+  font-size: 10px;
+  width: 7em;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked + svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked + svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked + svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked + svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked + svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked + svg #stars {
+  opacity: 1;
 }
