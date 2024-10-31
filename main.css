@@ -19,11 +19,17 @@
 }
 
 .header {
-  grid-area: header;
-  padding: 1rem .5rem;
+  /* grid-area: header;
   text-align: center;
-  border-radius: 2.55rem;
-  background-color: #d3d3d3;
+  border-radius: 1.55rem;
+  background: #2d2d2d; */
+  grid-area: header;
+  display: flex; /* Usamos flexbox en el header */
+  justify-content: space-between; /* Distribuye los elementos de manera uniforme */
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  padding: 1rem; /* Añadimos algo de padding para el espacio */
+  border-radius: 1.55rem;
+  background: #2d2d2d;
 }
 
 .main {
@@ -55,13 +61,21 @@
 /* Estilos del formulario */
 
 .brutalist-form {
-  --input-focus: #2d8cf0;
+  /* --input-focus: #2d8cf0; */
+  --terminal-main-color:#1e1e1e;
+  --main-text-color:#FaFaFa;
   --font-color: #323232;
   --font-color-sub: #666;
-  --bg-color: #fff;
+  --form-bg-color: #262626;
   --main-color: #323232;
+  --input-bg-color:#333333;
+  --input-color:#e0e0e0;
+  --title-color:#F0F0F0;
+  --border-and-shadow-color:#F0F0F0;
+  --button-bg-color: #70757a;
+  --trasnformed-label:#a6a8ad;
   padding: 20px;
-  background: lightgrey;
+  background: var(--form-bg-color);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -70,13 +84,16 @@
   border-radius: 5px;
   border: 2px solid var(--main-color);
   box-shadow: 4px 4px var(--main-color);
+  width: 100%;
+  font-family: monospace;
 }
 
 .title {
-  color: var(--font-color);
-  font-weight: 900;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
   margin-bottom: 25px;
+  font-weight: bold;
+  color: var(--title-color);
 }
 
 .brutalist-container {
@@ -90,15 +107,16 @@
   padding: 15px;
   font-size: 18px;
   font-weight: bold;
-  color: #000;
-  background-color: #fff;
-  border: 4px solid #000;
+  color: var(--input-color);
+  background-color:var(--input-bg-color);
+  /* border: 2px solid var(--border-and-shadow-color); */
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 12px;
   outline: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 5px 5px 0 #000, 10px 10px 0 #4a90e2;
+  /* box-shadow: 5px 5px 0 #000, 10px 10px 0 #4a90e2; */
+  /* box-shadow: 0px 4px var(--border-and-shadow-color); */
 }
 
 .brutalist-label {
@@ -107,7 +125,7 @@
   top: -25px;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: var(--border-and-shadow-color);
   background-color: #000;
   padding: 5px 10px;
   transform: rotate(-1deg);
@@ -118,7 +136,9 @@
 .brutalist-input:focus + .brutalist-label,
 .brutalist-input:focus-visible + .brutalist-label {
   transform: rotate(0deg) scale(1.05);
-  background-color: #4a90e2;
+  background-color: var(--trasnformed-label);
+  color: var(--font-color);
+  border-radius: 10px;
 }
 
 .brutalist-input::placeholder {
@@ -136,7 +156,7 @@
   height: 40px;
   border-radius: 5px;
   border: 2px solid var(--main-color);
-  background-color: var(--bg-color);
+  background-color: var(--border-and-shadow-color);
   box-shadow: 4px 4px var(--main-color);
   font-size: 17px;
   font-weight: 600;
@@ -158,7 +178,7 @@
 .container{
   height: 100%;
   width: 100%;
-  background: #1e1e1e;
+  background: #e9e9e9;
   border-radius: 10px;
   border: 4px solid var(--main-color);
   box-shadow: 5px 6px var(--main-color);
@@ -172,6 +192,15 @@
   padding: 0 15px;
   background: #2d2d2d;
   justify-content: space-between;
+}
+.header_terminal_toolbar{
+  display: flex; /* Flexbox para los elementos internos */
+  flex-wrap: nowrap; /* No permitir que se envuelvan */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: space-between; /* Centrar horizontalmente */
+  width: 100%; /* Aseguramos que tome el ancho completo */
+  padding: .7rem;
+
 }
 
 .butt {
@@ -205,7 +234,7 @@
 
 .add_tab {
   border: none;
-  color: #ffffff;
+  color: var(--main-text-color);
   background: #3a3a3a;
   padding: 4px 8px;
   border-radius: 5px;
@@ -219,16 +248,18 @@
 }
 
 .user {
-  color: #ffffff;
+  color: #FaFaFa;
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
 }
 
 .terminal_body {
   background: #1e1e1e;
   height: calc(100% - 35px);
   padding: 15px;
-  font-family: "Consolas", monospace;
+  font-family: system-ui,monospace;
+  font-weight: bold;
   font-size: 14px;
   line-height: 1.5;
   overflow-y: auto;
@@ -245,7 +276,7 @@
 }
 
 .terminal_user {
-  color: #00ff9c;
+  color: #FaFaFa;
 }
 .terminal_location {
   color: #0066ff;
@@ -272,85 +303,173 @@
   }
 } 
 /* Night Mode toggle */
-.nav-items{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-}
-.nav-items a{
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-decoration-style: none;
-  
+
+
+.header img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #FaFaFa;
+  margin-right: 0.5rem; /* Espacio entre la imagen y el texto */
 }
 
+.header-dark-theme {
+  display: flex; /* Usamos flexbox en cada uno de los contenedores */
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+  width: 125px; /* Mantener el ancho consistente */
+  height: 75px; /* Mantener la altura consistente */
+  font-family: -apple-system;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.header-clock {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  width: 125px;
+  height: 75px;
+  padding: 0 1rem;
+  font-family: -apple-system;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #70757a;
+  border-radius: 12px;
+}
+.header-weather{
+  display: flex; /* Para alinear icono e información del clima en fila */
+  align-items: center; /* Centra verticalmente el icono y el texto */
+  width: 125px;
+  height: 75px;
+  font-family: -apple-system;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+}
+.weather-icon {
+  margin-right: 0.5rem; /* Espacio entre el icono y la información del clima */
+}
+
+.weather-icon img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #fafafa;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column; /* Coloca ubicación, temperatura y descripción en columna */
+  align-items: flex-start; /* Alinea los textos a la izquierda */
+}
+
+.weather-location {
+  font-size: 16px;
+}
+
+.weather-temp {
+  font-size: 14px;
+}
+
+.weather-desc {
+  font-size: 14px;
+  font-weight: normal; /* Opcional: si quieres un estilo más suave para la descripción */
+}
+
+
+.header-clock .date {
+  font-size: 16px; /* Tamaño de fuente para la fecha */
+}
+
+.header-clock .time {
+  font-size: 20px; /* Tamaño de fuente para la hora */
+}
+
+.header-dark-theme {
+  font-size: 16px;
+}
+.header-weather p{
+  font-size: 18px;
+}
+/* Estilos toggler dark-theme */
 /* The switch - the box around the slider */
-#theme-toggle-button {
-  font-size: 10px;
-  width: 7em;
+.switch {
+  padding: 12px;
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 2em;
   cursor: pointer;
 }
 
 /* Hide default HTML checkbox */
-#toggle {
+.switch input {
+ 
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-#container,
-#patches,
-#stars,
-#button,
-#sun,
-#moon,
-#cloud {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 0.25s;
+/* The slider */
+.slider {
+  --background: #20262c;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background);
+  transition: 0.5s;
+  border-radius: 30px;
 }
 
-/* night sky background */
-#toggle:checked + svg #container {
-  fill: #2b4360;
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 50%;
+  left: 10%;
+  bottom: 15%;
+  box-shadow: inset 8px -4px 0px 0px #ececd9, -4px 1px 4px 0px #dadada;
+  background: var(--background);
+  transition: 0.5s;
 }
 
-/* move button to right when checked */
-#toggle:checked + svg #button {
-  transform: translate(28px, 2.333px);
+.decoration {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  right: 20%;
+  top: 15%;
+  background: #e5f041e6;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s;
+  box-shadow: -7px 10px 0 #e5f041e6, 8px 15px 0 #e5f041e6, -17px 1px 0 #e5f041e6,
+    -20px 10px 0 #e5f041e6, -7px 23px 0 #e5f041e6, -15px 25px 0 #e5f041e6;
 }
 
-/* show/hide sun and moon based on checkbox state */
-#sun {
-  opacity: 1;
+input:checked ~ .decoration {
+  transform: translateX(-20px);
+  width: 10px;
+  height: 10px;
+  background: white;
+  box-shadow: -12px 0 0 white, -6px 0 0 1.6px white, 5px 15px 0 1px white,
+    1px 17px 0 white, 10px 17px 0 white;
 }
 
-#toggle:checked + svg #sun {
-  opacity: 0;
+input:checked + .slider {
+  background-color: #5494de;
 }
 
-#moon {
-  opacity: 0;
-}
-
-#toggle:checked + svg #moon {
-  opacity: 1;
-}
-
-/* show or hide background items on checkbox state */
-#cloud {
-  opacity: 1;
-}
-
-#toggle:checked + svg #cloud {
-  opacity: 0;
-}
-
-#stars {
-  opacity: 0;
-}
-
-#toggle:checked + svg #stars {
-  opacity: 1;
+input:checked + .slider:before {
+  transform: translateX(100%);
+  box-shadow: inset 15px -4px 0px 15px #efdf2b, 0 0 10px 0px #efdf2b;
 }
