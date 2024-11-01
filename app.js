@@ -83,3 +83,33 @@ window.addEventListener('load',()=>{
         setInterval(()=>
           mostrarHora(),1000);
 
+// Modo oscuro usando local storage
+
+let darkmode = localStorage.getItem('darkmode');
+const themeSwitch = document.getElementById('switch');
+const themeText = document.querySelector('.header-dark-theme p'); // Elemento de texto del modo
+
+// Función para activar el modo oscuro
+const enableDarkmode = () => {
+  document.body.classList.add('darkmode');
+  themeText.textContent = "Modo Claro"; // Cambia el texto a "Modo Claro"
+  themeSwitch.checked = true; // Marca el toggle
+  localStorage.setItem('darkmode', 'active');
+}
+
+// Función para desactivar el modo oscuro
+const disableDarkmode = () => {
+  document.body.classList.remove('darkmode');
+  themeText.textContent = "Modo Oscuro"; // Cambia el texto a "Modo Oscuro"
+  themeSwitch.checked = false; // Desmarca el toggle
+  localStorage.setItem('darkmode', null);
+}
+
+// Verifica el estado de darkmode al cargar la página
+if (darkmode === "active") enableDarkmode();
+
+// Evento de cambio en el toggle para cambiar el tema
+themeSwitch.addEventListener("change", () => {
+  darkmode = localStorage.getItem('darkmode');
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+});
