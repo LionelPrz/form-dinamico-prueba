@@ -273,10 +273,12 @@
   overflow-y: auto;
 }
 
-.terminal_promt {
+.terminal_promt{
   display: flex;
-  align-items: center;
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .terminal_promt span {

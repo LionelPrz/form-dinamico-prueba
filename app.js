@@ -1,5 +1,7 @@
-window.addEventListener('load',()=>{
-
+  // variables para el dark mode
+  let darkmode = localStorage.getItem('darkmode');
+  const themeSwitch = document.getElementById('switch');
+  const themeText = document.querySelector('.header-dark-theme p'); // Elemento de texto del modo
   // Variables para seccion clima
   let temperatura = document.getElementById('temperature');
   let ubicacion = document.getElementById('location');
@@ -9,6 +11,20 @@ window.addEventListener('load',()=>{
   let lat =  -28.751389;
   let key = '9588893d32e1c6900e83cbb514ec110c';
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&lang=es&units=metric`
+  // Variables seccion reloj
+  let time = document.getElementById('time');
+  let date = document.getElementById('date');
+  let fecha = new Date();
+  let dia = fecha.getDate();
+  let semana = fecha.getDay();
+  let hora = fecha.getHours();
+  let minuto = fecha.getMinutes();
+
+  // Variables para la generacion del texto dinamico
+  let formD = document.querySelector(".brutalist-form");
+  let ident;
+  // Funcion para tener la aplicacion de clima en la app
+window.addEventListener('load',()=>{
 
         fetch(url)
           .then(response =>{return response.json()})
@@ -63,15 +79,7 @@ window.addEventListener('load',()=>{
 
 
       const mostrarHora = () =>{
-          // Variables seccion reloj
-      let time = document.getElementById('time');
-      let date = document.getElementById('date');
 
-        let fecha = new Date();
-        let dia = fecha.getDate();
-        let semana = fecha.getDay();
-        let hora = fecha.getHours();
-        let minuto = fecha.getMinutes();
     
         // Hacemos una relacion entre el string de day y los dias en texto
         let dias = ['DOMINGO ','LUNES ','MARTES ','MIERCOLES ','JUEVES ','VIERNES ','SABADO '];
@@ -84,10 +92,6 @@ window.addEventListener('load',()=>{
           mostrarHora(),1000);
 
 // Modo oscuro usando local storage
-
-let darkmode = localStorage.getItem('darkmode');
-const themeSwitch = document.getElementById('switch');
-const themeText = document.querySelector('.header-dark-theme p'); // Elemento de texto del modo
 
 // Función para activar el modo oscuro
 const enableDarkmode = () => {
@@ -113,3 +117,51 @@ themeSwitch.addEventListener("change", () => {
   darkmode = localStorage.getItem('darkmode');
   darkmode !== "active" ? enableDarkmode() : disableDarkmode();
 });
+
+// let formD = document.querySelector('.brutalist-form');
+
+formD.addEventListener('click',(e)=>{
+  console.log(e.target.id);
+  ident = e.target.id;
+
+  const textDinamic=[{
+    id:"nombre",
+    texto:"Estamos en el campo nombre"
+  },
+  {
+    id:"apellido",
+    texto:"Estamos en el campo apellido"
+  },
+  {
+    id:"dni",
+    texto:"Estamos en el campo dni"
+  },
+  {  id:"telefono",
+    texto:"Estamos en el campo telefono"
+  },
+  {
+    id:"selectBarrio",
+    texto:"Estamos en el campo barrio"
+  },
+  {
+    id:"selectQueja",
+    texto:"Estamos en el campo queja"
+  },
+  {
+    id:"textArea",
+    texto:"Estamos en el campo Texto"
+  }
+  ];
+
+  let valorC = textDinamic.find(electo => electo.id === ident);
+
+  console.log(valorC);
+
+});
+
+function generarTexto(){
+
+  textoG = `
+    
+  `
+}

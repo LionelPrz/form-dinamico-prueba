@@ -48,23 +48,23 @@
                 <form class="brutalist-form">
                     <h1 class="title">Formulario de relevamiento de datos</h1>
                     <div class="brutalist-container">
-                        <input placeholder="Nombre" class="brutalist-input smooth-type" type="text" />
+                        <input name="nombre" id="nombre" placeholder="Nombre" class="brutalist-input smooth-type" type="text" />
                         <label class="brutalist-label">Nombre</label>
                     </div>
                     <div class="brutalist-container">
-                      <input placeholder="Apellido" class="brutalist-input smooth-type" type="text" />
+                      <input name="apellido" id="apellido" placeholder="Apellido" class="brutalist-input smooth-type" type="text" />
                       <label class="brutalist-label">Apellido</label>
                   </div>
                   <div class="brutalist-container">
-                      <input placeholder="DNI" class="brutalist-input smooth-type" type="text" />
+                      <input name="dni" id="dni" placeholder="DNI" class="brutalist-input smooth-type" type="text" />
                       <label class="brutalist-label">DNI</label>
                   </div>
                   <div class="brutalist-container">
-                      <input placeholder="Teléfono" class="brutalist-input smooth-type" type="text" />
+                      <input name="telefono" id="telefono" placeholder="Teléfono" class="brutalist-input smooth-type" type="text" />
                       <label class="brutalist-label">Teléfono</label>
                   </div>
                   <div class="brutalist-container">
-                      <select class="brutalist-input smooth-type">
+                      <select name="barrio" id="selectBarrio" class="brutalist-input smooth-type">
                           <option value="" disabled selected>Barrio</option>
                           <option value="barrio1">Barrio 1</option>
                           <option value="barrio2">Barrio 2</option>
@@ -73,7 +73,7 @@
                       <label class="brutalist-label">Barrio</label>
                   </div>
                   <div class="brutalist-container">
-                      <select class="brutalist-input smooth-type">
+                      <select name="queja" id="selectQueja" class="brutalist-input smooth-type">
                           <option value="" disabled selected>Tipo de Reclamo</option>
                           <option value="queja">Queja</option>
                           <option value="sugerencia">Sugerencia</option>
@@ -82,11 +82,11 @@
                   </div>
               
                   <div class="brutalist-container">
-                      <textarea placeholder="Detalles de la queja" class="brutalist-input smooth-type" rows="4"></textarea>
+                      <textarea name="texto" id="textArea" placeholder="Detalles de la queja" class="brutalist-input smooth-type" rows="4"></textarea>
                       <label class="brutalist-label">Ingrese detalles de su reclamo</label>
                   </div>
                     <!-- Resto del formulario aquí -->
-                    <button class="button-confirm">Enviar Datos</button>
+                    <button id="btn-confirm" class="button-confirm">Enviar Datos</button>
                 </form>
             </div>
         </div>
@@ -108,6 +108,8 @@
         <span class="terminal_location">~</span>
         <span class="terminal_bling">$</span>
         <span class="terminal_cursor"></span>
+        <br>
+        <div style="color: aliceblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, alias a, commodi atque nesciunt odit, vero id cupiditate dolor libero doloribus omnis hic beatae? Sapiente deserunt possimus a facilis iste!</div>
         </div>
     </div>
     </div>
