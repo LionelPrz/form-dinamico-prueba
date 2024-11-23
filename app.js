@@ -118,7 +118,6 @@ themeSwitch.addEventListener("change", () => {
   darkmode !== "active" ? enableDarkmode() : disableDarkmode();
 });
 
-<<<<<<< HEAD
 // let formD = document.querySelector('.brutalist-form');
 
 formD.addEventListener('click',(e)=>{
@@ -166,49 +165,3 @@ function generarTexto(){
     
   `
 }
-=======
-
-// Funcion dinamica para generar texto en consola
-let formD = document.querySelector('.brutalist-form');
-
-formD.addEventListener('click',(e)=>{
-  console.log(e.target.id);
-
-  // Creacion de el arreglo que posee los elementos a generar
-  
-  function generarTexto(){
-    const textDinamic=[{
-      id:"nombre",
-      texto:"Estamos en el campo nombre"
-    },
-    {
-      id:"apellido",
-      texto:"Estamos en el campo apellido"
-    },
-    {
-      id:"dni",
-      texto:"Estamos en el campo dni"
-    },
-    {  id:"telefono",
-      texto:"Estamos en el campo telefono"
-    },
-    {
-      id:"selectBarrio",
-      texto:"Estamos en el campo barrio"
-    },
-    {
-      id:"selectQueja",
-      texto:"Estamos en el campo queja"
-    },
-    {
-      id:"textArea",
-      texto:"Estamos en el campo Texto"
-    }
-    ];
-}});
-
-  // for (let i = 0; i < formD.length; i++) {
-  //   console.log(formD[i].id);
-  //   console.log(textDinamic.length);
-  // }
->>>>>>> refs/remotes/origin/main
