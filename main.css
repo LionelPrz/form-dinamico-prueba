@@ -48,7 +48,6 @@
     "footer footer";
     height: 100vh;
 }
-
 .header {
   grid-area: header;
   display: flex;
@@ -265,10 +264,10 @@
 .terminal_body {
   background: var(--background);
   height: calc(100% - 35px);
-  padding: 15px;
+  padding: 16px;
   font-family: system-ui,monospace;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.5;
   overflow-y: auto;
 }
@@ -281,10 +280,6 @@
   align-content: center;
 }
 
-/* .terminal_promt span {
-  margin-right: 5px;
-} */
-
 .terminal_user {
   color: var(--title-color);
 }
@@ -296,21 +291,24 @@
 }
 
 .terminal_cursor {
-  display: inline-block;
+  display: block;
   width: 8px;
   height: 18px;
   background: #ffffff;
   animation: blink 1s step-end infinite;
 }
 .dinamic-span{
+  padding: .6rem;
+  color: var(--border-and-shadow-color);
   display: block;
+  font-size: 1.1rem;
+  font-weight: bold;
   font-family: monospace;
   white-space: nowrap;
-  border-right: 4px solid;
-  width: 12ch;
+  width: 28ch;
 
-  animation: typing 2s steps(12),
-  blick .5s step-end; 
+  animation: typing 2s steps(28),
+  blick .5s infinite step-end;
   overflow: hidden;
 }
 

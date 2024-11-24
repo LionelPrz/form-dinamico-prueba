@@ -167,6 +167,6 @@ formD.addEventListener('click',(e)=>{
 function generarTexto(){
 
   spamD.insertAdjacentHTML("afterend",`
-    <span class="dinamic-span">${valorC.texto}</span>
+    <span class="dinamic-span">${valorC.texto}<span class="terminal_cursor"></span></span>
   `);
 }
