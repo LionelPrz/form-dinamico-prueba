@@ -278,11 +278,12 @@
   margin-bottom: 10px;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-content: center;
 }
 
-.terminal_promt span {
+/* .terminal_promt span {
   margin-right: 5px;
-}
+} */
 
 .terminal_user {
   color: var(--title-color);
@@ -300,6 +301,21 @@
   height: 18px;
   background: #ffffff;
   animation: blink 1s step-end infinite;
+}
+.dinamic-span{
+  display: block;
+  font-family: monospace;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 12ch;
+
+  animation: typing 2s steps(12),
+  blick .5s step-end; 
+  overflow: hidden;
+}
+
+@keyframes typing{
+  from {width: 0}
 }
 
 @keyframes blink {

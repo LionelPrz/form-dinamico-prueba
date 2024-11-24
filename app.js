@@ -22,7 +22,9 @@
 
   // Variables para la generacion del texto dinamico
   let formD = document.querySelector(".brutalist-form");
+  let spamD = document.getElementById("span-f");
   let ident;
+  let valorC;
   // Funcion para tener la aplicacion de clima en la app
 window.addEventListener('load',()=>{
 
@@ -121,47 +123,50 @@ themeSwitch.addEventListener("change", () => {
 // let formD = document.querySelector('.brutalist-form');
 
 formD.addEventListener('click',(e)=>{
-  console.log(e.target.id);
   ident = e.target.id;
 
   const textDinamic=[{
     id:"nombre",
-    texto:"Estamos en el campo nombre"
+    texto:"Estamos en el campo nombre por lo tanto veremos dijo el ciego"
   },
   {
     id:"apellido",
-    texto:"Estamos en el campo apellido"
+    texto:"Estamos en el campo apellido por lo tanto veremos dijo el ciego"
   },
   {
     id:"dni",
-    texto:"Estamos en el campo dni"
+    texto:"Estamos en el campo dni por lo tanto veremos dijo el ciego"
   },
   {  id:"telefono",
-    texto:"Estamos en el campo telefono"
+    texto:"Estamos en el campo telefono por lo tanto veremos dijo el ciego"
   },
   {
     id:"selectBarrio",
-    texto:"Estamos en el campo barrio"
+    texto:"Estamos en el campo barrio por lo tanto veremos dijo el ciego"
   },
   {
     id:"selectQueja",
-    texto:"Estamos en el campo queja"
+    texto:"Estamos en el campo queja por lo tanto veremos dijo el ciego"
   },
   {
     id:"textArea",
-    texto:"Estamos en el campo Texto"
+    texto:"Estamos en el campo Texto por lo tanto veremos dijo el ciego"
   }
   ];
 
-  let valorC = textDinamic.find(electo => electo.id === ident);
+  valorC = textDinamic.find(electo => electo.id === ident);
 
-  console.log(valorC);
+  console.log(valorC.id);
+  console.log(valorC.texto);
 
+    console.log(valorC.texto.length);
+
+  generarTexto();
 });
 
 function generarTexto(){
 
-  textoG = `
-    
-  `
+  spamD.insertAdjacentHTML("afterend",`
+    <span class="dinamic-span">${valorC.texto}</span>
+  `);
 }
